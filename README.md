@@ -50,5 +50,18 @@ C:\Apps\school-management-system\
     │   ├── services\
     │   └── App.js
     └── package.json
+# Backend Setup
+Step 1: Initialize Node.js Project
+cd C:\Apps\backend
+npm init -y
+npm install express mysql2 sequelize bcryptjs jsonwebtoken dotenv cors
+npm install --save-dev nodemon
+Step 2: Create .env File
+PORT=5000
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=school_management_db
+JWT_SECRET=your_super_secret_key_change_this_later
 
 
