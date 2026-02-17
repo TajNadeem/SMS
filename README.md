@@ -9,59 +9,38 @@ Learning Objectives
 - Work with MySQL databases using Sequelize ORM
 - Deploy applications to production servers
 # Backend Technologies
-Node.js v16+ - JavaScript runtime for server-side development.
-Express.js - Web application framework for building RESTful APIs.
-MySQL - Relational database for storing application data.
-Sequelize ORM - Object-Relational Mapping tool for database operations.
+- Node.js v16+ (JavaScript runtime for server-side development.)
+- Express.js  (Web application framework for building RESTful APIs.)
+- MySQL  (Relational database for storing application data.)
+- Sequelize ORM (Object-Relational Mapping tool for database operations.)
 # Key Packages:
-• bcryptjs - Password hashing.
-• jsonwebtoken (JWT) - Authentication tokens.
-• cors - Cross-Origin Resource Sharing.
-• dotenv - Environment variables management.
+- bcryptjs (Password hashing.)
+- jsonwebtoken (JWT) - Authentication tokens.
+- cors - Cross-Origin Resource Sharing.
+- dotenv - Environment variables management.
 # Frontend Technologies
-React.js - Modern JavaScript library for building user interfaces.
-React Router - Client-side routing for single-page applications.
-Axios - HTTP client for API requests.
-CSS3 - Styling with modern CSS features, gradients, and animations.
+- React.js (Modern JavaScript library for building user interfaces.)
+- React Router (Client-side routing for single-page applications.)
+- Axios (HTTP client for API requests.)
+- CSS3 (Styling with modern CSS features, gradients, and animations.)
 # Required Software
-• Node.js LTS (v16 or higher).
-• npm (comes with Node.js).
-• XAMPP (for MySQL database).
-• VS Code (recommended editor).
-• Chrome or Edge browser.
-# Project Structure
-Create the following folder structure:
-C:\Apps\school-management-system\
-├── backend\
-│   ├── config\
-│   ├── controllers\
-│   ├── middleware\
-│   ├── models\
-│   ├── routes\
-│   ├── .env
-│   ├── server.js
-│   └── package.json
-└── frontend\
-    ├── public\
-    ├── src\
-    │   ├── components\
-    │   ├── context\
-    │   ├── pages\
-    │   ├── services\
-    │   └── App.js
-    └── package.json
+- Node.js LTS (v16 or higher).
+- npm (comes with Node.js).
+- XAMPP (for MySQL database).
+- VS Code (recommended editor).
+- Chrome or Edge browser.
 # Backend Setup
 Step 1: Initialize Node.js Project
-cd C:\Apps\backend
-`npm init -y`
-`npm install express mysql2 sequelize bcryptjs jsonwebtoken dotenv cors`
-`npm install --save-dev nodemon`
+- cd C:\Apps\backend
+- `npm init -y`
+- `npm install express mysql2 sequelize bcryptjs jsonwebtoken dotenv cors`
+- `npm install --save-dev nodemon`
 # Step 2: Create .env File
-`PORT=5000`
-`DB_HOST=localhost`
-`DB_USER=root`
-`DB_PASSWORD=`
-`DB_NAME=school_management_db`
-`JWT_SECRET=your_super_secret_key_change_this_later`
+- `PORT=5000`
+- `DB_HOST=localhost`
+- `DB_USER=root`
+- `DB_PASSWORD=`
+- `DB_NAME=school_management_db`
+- `JWT_SECRET=your_super_secret_key_change_this_later`
 
 
