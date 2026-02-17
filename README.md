@@ -29,18 +29,91 @@ Learning Objectives
 - XAMPP (for MySQL database).
 - VS Code (recommended editor).
 - Chrome or Edge browser.
-# Backend Setup
-Step 1: Initialize Node.js Project
-- cd C:\Apps\backend
-- `npm init -y`
-- `npm install express mysql2 sequelize bcryptjs jsonwebtoken dotenv cors`
-- `npm install --save-dev nodemon`
-# Step 2: Create .env File
-- `PORT=5000`
-- `DB_HOST=localhost`
-- `DB_USER=root`
-- `DB_PASSWORD=`
-- `DB_NAME=school_management_db`
-- `JWT_SECRET=your_super_secret_key_change_this_later`
+  
+# Step 1: LOCAL ENVIRONMENT SETUP
+- Install Node.js (Go to https://nodejs.org/)
+- Run installer, click "Next" for everything (default settings are fine)
+- Open Command Prompt and verify:
+-   node --version
+-   npm --version
+- You should see version numbers (e.g., v20.x.x and 10.x.x)
+
+# Step 2: Create Database XAMPP MySQL
+- phpMyAdmin Create a new database: Database name: school_management_db
+
+# Step 3: Initialize Backend
+- mkdir backend
+- cd backend
+- npm init -y
+- This creates a backend folder and a package.json file.
+
+# Step 4: Install Backend Dependencies
+Still in the terminal (inside backend folder), run:
+- bashnpm install express mysql2 sequelize bcryptjs jsonwebtoken dotenv cors
+- npm install --save-dev nodemon
+
+# Step 5: Configure Environment Variables
+Create a file: backend/.env
+- 'envPORT=5000'
+- 'DB_HOST=localhost'
+- 'DB_USER=root'
+- 'DB_PASSWORD='
+- 'DB_NAME=school_management_db'
+- 'JWT_SECRET=your_super_secret_key_change_this_later'
+Note: XAMPP default MySQL password is blank (empty). If you set a password, put it after DB_PASSWORD=
+
+# Step 6: Create Basic Server
+Create file: backend/server.js
+
+# Step 7: Update package.json Scripts
+Open backend/package.json and add this inside "scripts":
+'json"scripts": {'
+  '"start": "node server.js",'
+  '"dev": "nodemon server.js"'
+'}'
+
+# Step 8: Test Backend
+In terminal (make sure you're in backend folder):
+`bashnpm run dev`
+You should see:
+`Server running on http://localhost:5000`
+`Open your browser and go to: http://localhost:5000/api/test`
+`You should see:`
+`json{"message":"Backend is running!"}`
+
+# Step 9: Setup Frontend (React)
+`Open NEW terminal in VS Code (Click the + button in terminal panel), then:`
+`npx create-react-app frontend`
+
+# Step 10: Install Frontend Dependencies
+`npm install axios react-router-dom`
+
+# Step 11: Test Frontend
+- npm start
+
+# STEP 12: Create Database Configuration
+- create a file inside it: backend/config/database.js
+
+# STEP 13: Create Database Models
+- backend/models/User.js
+- Manages all models backend/models/index.js 
+- Authentication Controller backend/controllers/authController.js
+- Authentication Routes backend/routes/authRoutes.js
+
+# STEP 14: FRONTEND: LOGIN & REGISTER PAGES
+- Create API Service frontend/src/services/api.js
+- Create Auth Context (for managing user state) frontend/src/context/AuthContext.js
+- Create Login Page frontend/src/pages/Login.js
+- Create Register Page frontend/src/pages/Register.js
+- Create Dashboard Page frontend/src/pages/Dashboard.js
+- Create CSS Files frontend/src/pages/Auth.css | frontend/src/pages/Dashboard.css
+
+# STEP 15: Install React Router
+- npm install react-router-dom
+
+
+
+
+
 
 
